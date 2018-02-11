@@ -1,3 +1,2 @@
 language: c
-install: make psp-gcc
 script: "make -f psp/Makefile"
