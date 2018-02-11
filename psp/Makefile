@@ -125,8 +125,8 @@ ASFLAGS = $(CFLAGS) -c
 include $(PSPSDK)/lib/build.mak
 
 ifneq ($(VS_PATH),)
-CC       = vs-psp-gcc
-CXX      = vs-psp-g++
+CC       = psp-gcc
+CXX      = psp-g++
 endif
 
 kx-install: kxploit
