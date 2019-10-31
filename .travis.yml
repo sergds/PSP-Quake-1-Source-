@@ -5,6 +5,7 @@ before_script:
 - cd psptoolchain
 - export PSPDEV=/usr/local/pspdev
 - export PATH=$PATH:$PSPDEV/bin
-- ls
+- echo "dash dash/sh boolean false"|sudo debconf-set-selections
+- sudo dpkg-reconfigure --frontend=noninteractive dash
 - sudo ./toolchain-sudo.sh
 script: "make -f psp/MakefileNew"
