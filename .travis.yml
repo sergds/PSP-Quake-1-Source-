@@ -7,5 +7,5 @@ before_script:
 - export PATH=$PATH:$PSPDEV/bin
 - echo "dash dash/sh boolean false"|sudo debconf-set-selections
 - sudo dpkg-reconfigure --frontend=noninteractive dash
-- sudo ./toolchain-sudo.sh
+- travis_wait sudo ./toolchain-sudo.sh
 script: "make -f psp/MakefileNew"
