@@ -8,4 +8,8 @@ before_script:
 - echo "dash dash/sh boolean false"|sudo debconf-set-selections
 - sudo dpkg-reconfigure --frontend=noninteractive dash
 - travis_wait sudo ./toolchain-sudo.sh
+- pwd
+- cd ..
+- git clone https://github.com/sergds/pspquake
+- cd pspquake
 script: "make -f psp/MakefileNew"
